@@ -1,27 +1,30 @@
 import { useState } from "react";
 import QuizSetup from "./components/QuizSetup";
 import QuizInterface from "./components/QuizInterface";
+import "./App.css";
+
 function App() {
-     const[topic, setTopic]= useState("");
-     const[difficulty, setDifficulty]= useState("");
-     const[numberOfQuestions, setNumberOfQuestions]= useState(0);
-     const[quizStart, setQuizStart] = useState(false);
-     
-     const startQuiz=(topic, difficulty, numberOfQuestions)=>{
-      setTopic(topic);
-      setDifficulty(difficulty);
-      setNumberOfQuestions(numberOfQuestions);
-      setQuizStart(true);
-     };
+  const [quizConfig, setQuizConfig] = useState(null); // 👈 store everything here
+  const [quizStart, setQuizStart] = useState(false);
+
+  const startQuiz = (topic, difficulty, numberOfQuestions) => {
+    setQuizConfig({ topic, difficulty, numberOfQuestions }); // one stable object
+    setQuizStart(true);
+  };
+
   return (
     <div>
-      { quizStart 
-       ? <QuizInterface topic ={topic} difficulty={difficulty} numberOfQuestions={numberOfQuestions} /> 
-       : 
-       <QuizSetup onStartQuiz={startQuiz}/>
-      }
+      {quizStart && quizConfig ? (
+        <QuizInterface
+          topic={quizConfig.topic}
+          difficulty={quizConfig.difficulty}
+          numberOfQuestions={quizConfig.numberOfQuestions}
+        />
+      ) : (
+        <QuizSetup onStartQuiz={startQuiz} />
+      )}
     </div>
-  )
-  }
+  );
+}
 
 export default App;

@@ -14,21 +14,28 @@ function QuizSetup({ onStartQuiz }) {
   };
 
   return (
-    <div>
+    <div className="quiz-container">
       <h2>Please select your preferred topic!</h2>
       <label htmlFor="topic">Select a topic:</label>
       <select
         id="topic"
         value={topic}
         onChange={(e) => setTopic(e.target.value)}
+      
       >
         <option value="">Choose a topic for this quiz, please</option>
-        <option value="general">General</option>
-        <option value="science">Science</option>
-        <option value="history">History</option>
-        <option value="entertainment">Entertainment</option>
+       <option value="General Knowledge">General Knowledge</option>
+        <option value="Books">Books</option>
+        <option value="Film">Film</option>
+        <option value="Music">Music</option>
+        <option value="Science & Nature">Science & Nature</option>
+        <option value="Computers">Computers</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Sports">Sports</option>
+        <option value="Geography">Geography</option>
+        <option value="History">History</option>
       </select>
-      <p>Wonderful, you selected: {topic}</p>
+      <p>Wonderful, you selected:{topic}</p>
 
       <div>
         <h2>Please select your preferred difficulty!</h2>
