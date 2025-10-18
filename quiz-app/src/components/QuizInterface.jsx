@@ -114,18 +114,12 @@ function QuizInterface({ topic, difficulty, numberOfQuestions }) {
 
       <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         {answers.map((answer, index) => (
-          <button
+          <button className="options-button"
             key={index}
             onClick={() => handleAnswerSelect(answer)}
             disabled={selectedAnswer !== ""}
             dangerouslySetInnerHTML={{ __html: answer }}
-            style={{
-              padding: "10px",
-              borderRadius: "5px",
-              cursor: "pointer",
-              backgroundColor:
-                selectedAnswer === answer ? "#ddd" : "#f5f5f5",
-            }}
+            
           />
         ))}
       </div>
@@ -139,9 +133,9 @@ function QuizInterface({ topic, difficulty, numberOfQuestions }) {
 
           <p>
             {selectedAnswer === current.correct_answer ? (
-              <span style={{ color: "green" }}>Correct!</span>
+              <span className="correct-button" >Correct!</span>
             ) : (
-              <span style={{ color: "red" }}>
+              <span className="wrong-button">
                  Wrong! Correct answer:{" "}
                 <span
                   dangerouslySetInnerHTML={{
@@ -154,7 +148,7 @@ function QuizInterface({ topic, difficulty, numberOfQuestions }) {
 
           <button
             onClick={handleNextQuestion}
-            style={{ marginTop: "10px", padding: "10px 20px",background: "yellow" }}
+            className="next-button"
           >
             Next Question
           </button>

@@ -41,13 +41,11 @@ select {
   transition: all 0.2s ease-in-out;
 }
 
-select:hover {
-  border-color: #007bff;
-}
+
 
 /* Buttons */
 button {
-  background-color: #007bff;
+  background-color: gray;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -59,7 +57,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: red;
   transform: scale(1.03);
 }
 
@@ -74,55 +72,39 @@ button:hover {
   text-align: center;
 }
 
-.quiz-interface h1 {
-  color: #007bff;
-}
-
-.quiz-interface button {
-  background-color: #f5f5f5;
-  color: #222;
-  border: 1px solid #ddd;
-}
-
-.quiz-interface button:hover {
-  background-color: #e6e6e6;
-}
-
-/* Selected answer */
-.quiz-interface button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
 
 /* Correct and wrong answer feedback */
-.correct {
+.correct-button {
   color: green;
   font-weight: 600;
 }
 
-.wrong {
+.wrong-button {
   color: red;
   font-weight: 600;
 }
 
-/* Result section */
-.result {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.result h2 {
-  color: #28a745;
-}
-
-.result button {
-  background-color: #28a745;
-}
-
-.result button:hover {
-  background-color: #1e7e34;
-}
 
 body{
   background-color: grey;
+
+}
+.quiz-setup{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center;     /* centers horizontally */
+  height: 100vh;           /* full screen height */
+  text-align: center;      /* centers text */
+  background-color: #f5f5f5;
+}
+
+option{
+  justify-content: center;
+  text-align: center;
+
+}
+option:hover{
+  background-color: white;
+  cursor: pointer;
 }

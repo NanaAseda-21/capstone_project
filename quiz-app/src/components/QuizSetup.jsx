@@ -14,7 +14,7 @@ function QuizSetup({ onStartQuiz }) {
   };
 
   return (
-    <div className="quiz-container">
+    <div className="quiz-setup">
       <h2>Please select your preferred topic!</h2>
       <label htmlFor="topic">Select a topic:</label>
       <select
