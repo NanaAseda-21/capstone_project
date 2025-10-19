@@ -37,12 +37,6 @@ Run the index.html file in your browser.
 
 Enjoy taking the quiz! 🎉
 
-📸 Preview
-
-(You can later add a screenshot of your app here)
-
-![Quiz App Screenshot](screenshot.png)
-
 🧠 Learning Goals
 
 This project was built to:
@@ -55,13 +49,12 @@ Build a simple, functional frontend application from scratch
 
 🔮 Future Improvements
 
-Add a timer for each question
+
 
 Store high scores using localStorage
 
 Fetch questions dynamically using an API
 
-Add sound effects or animations for correct/incorrect answers
 
 👩‍💻 Author
 
